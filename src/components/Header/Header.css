@@ -15,7 +15,7 @@
   .nav {
     height: 80px;
     width: 100%;
-    background:  linear-gradient(180deg, rgba(37,37,37,1) 0%, rgba(82,84,84,1) 100%);
+    background:  linear-gradient(180deg, rgb(14, 13, 46) 0%, rgb(0, 0, 0) 100%);
     position: relative;
     box-shadow: 0 7px 14px rgba(0,0,0,0.50), 0 4px 4px rgba(0,0,0,0.50);
   }
@@ -54,10 +54,12 @@
     text-decoration: none;
     font-family: 'Staatliches', cursive;
     color: #ffffff;
+    transition: scale .7s;
   }
   
   .nav > .nav-links > a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.2)
   }
   
   .nav > #nav-check {
@@ -79,13 +81,37 @@
       padding: 13px;
     }
     .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(93, 239, 255, 0.639);
+
+    }
+    
+    #nav-check:checked ~ .nav-btn label span:nth-child(1) {
+      position:absolute;
+      transform: rotate(90deg); 
+      right: 15px;
+      top: 35px;
+    }
+    #nav-check:checked ~ .nav-btn label span:nth-child(2) {
+      position:absolute;
+      transform: rotate(60deg);
+      top:46px;
+      width: 10px;
+      left: 15px;
+
+    }
+    #nav-check:checked ~ .nav-btn label span:nth-child(3) {
+      position:absolute;
+      top: 41px;
+      left:20px;
+      transform: rotate(120deg); 
+      width: 10px;
     }
     .nav > .nav-btn > label > span {
       display: block;
       width: 25px;
       height: 10px;
       border-top: 2px solid #eee;
+      transition: transform .2s;
     }
     .nav > .nav-links {
       position: absolute;

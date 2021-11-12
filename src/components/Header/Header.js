@@ -6,22 +6,22 @@ import iconwtext from '../../assets/iconwtext.png'
 const Header = () => {
     return (
         <div className="header">
-            <div class="nav">
+            <div className="nav">
                 <input type="checkbox" id="nav-check"></input>
-                    <div class="nav-header">
-                        <img class="nav-logo" src={iconwtext} alt='logo'></img>
+                    <div className="nav-header">
+                        <img className="nav-logo" src={iconwtext} alt='logo'></img>
                     </div>
-                <div class="nav-btn">
-                    <label for="nav-check">
+                <div className="nav-btn">
+                    <label htmlFor="nav-check">
                         <span></span>
                         <span></span>
                         <span></span>
                     </label>
                 </div>
-                <div class="nav-links">
-                    <NavLink to="/test">Test</NavLink>
-                    <NavLink to="/test">Test</NavLink>
-                    <NavLink to="/test">Test</NavLink>
+                <div className="nav-links">
+                    <NavLink to="/home">Home</NavLink>
+                    <NavLink to="/search">Search</NavLink>
+                    <NavLink to="/profile">Profile</NavLink>
                 </div>
             </div>
         </div>
