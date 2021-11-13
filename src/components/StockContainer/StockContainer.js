@@ -13,7 +13,7 @@ const StockContainer = ({data, type}) => {
     const generateStockArticles = () => {
         const generatedElements = data.map((indvStock) => {
             if(type === 'portfolio'){
-                return (<StockArticle symbol={indvStock.symbol} qty={indvStock.quantity}/>)
+                return (<StockArticle symbol={indvStock.symbol} qty={indvStock.quantity} purchasePrice={indvStock.purchasePrice}/>)
             }
             if(!type){
                 return (<StockArticle symbol={indvStock}/>)
@@ -24,18 +24,20 @@ const StockContainer = ({data, type}) => {
     return (
         <table className="ticker-container">
 
-            <thead className="ticker-header">
-                {type==="portfolio" && <th className="tkrH-qty">Quantity</th>}
-                {type==="portfolio" && <th className="tkrH-qty">Value</th>}
-                <th className="tkrH-name">Name</th>
-                <th className="tkrH-symbol">symbol</th>
-                <th className="tkrH-price">price</th>
-                <th className="tkrH-change">change</th>
-                <th className="tkrH-change-percentage">changePercentage</th>
-                <th className="tkrH-day-low">dayLow</th>
-                <th className="tkrH-day-high">dayHigh</th>
-                <th className="tkrH-open">open</th>
-            </thead>
+            <tr className="ticker-header">
+                <td className="tkrH-symbol">Symbol</td>
+                {type==="portfolio" && <td className="tkrH-qty">Quantity</td>}
+                {type==="portfolio" && <td className="tkrH-value">Value</td>}
+                {type==="portfolio" && <td className="tkrH-purchase-price">Purchase Price</td>}
+                {type==="portfolio" && <td className="tkrH-purchase-price">Profits</td>}
+                <td className="tkrH-name">Company</td>
+                <td className="tkrH-price">Price</td>
+                <td className="tkrH-change">Day's Change</td>
+                <td className="tkrH-change-percentage">Day %</td>
+                <td className="tkrH-day-low">Day Low</td>
+                <td className="tkrH-day-high">Day High</td>
+                <td className="tkrH-open">Open Price</td>
+            </tr>
             {elements}
         </table>
     )
