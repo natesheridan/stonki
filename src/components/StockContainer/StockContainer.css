@@ -1,0 +1,7 @@
+.ticker-container{
+    width:90%;
+    min-width: 500px;
+    max-width: 850px;
+    overflow-y: scroll;
+    border: 1px solid red;
+}

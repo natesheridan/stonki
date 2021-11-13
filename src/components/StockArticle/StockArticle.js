@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react'
-import './TickerArticle.css'
-import { getStockQuote } from './../../util/api'
+import './StockArticle.css'
+import { getStockQuote } from '../../util/api'
 
 
 
-const TickerArticle = ({ticker}) => {
+const StockArticle = ({symbol, qty}) => {
     const [currentData, setCurrentData] = useState(null);
     const [stockElement, setStockElement] = useState(null);
 
@@ -13,7 +13,7 @@ const TickerArticle = ({ticker}) => {
     }, [])
 
     const fetchData = async () => {
-      let response = await getStockQuote(ticker)
+      let response = await getStockQuote(symbol)
       setCurrentData(response[0])
     //   let element = generateStockElement(currentData)
     //   setStockElement(element)
@@ -40,8 +40,11 @@ const TickerArticle = ({ticker}) => {
     return (
             <>
                 <tr className="ticker-article">
+                    {qty&&<th className="tkr-qty">{qty}</th>}
+                    {qty&&
+                    <th className="tkr-value">{!currentData ?  "Loading... ": `$${(currentData.price * qty).toFixed(2)}`}</th>}
                     <th className="tkr-name">{!currentData ?  "Loading... ": currentData.name}</th>
-                    <th className="tkr-symbol">{!currentData ?  "Loading... ": currentData.symbol}</th>
+                    <th className="tkr-symbol">{symbol}</th>
                     <th className="tkr-price">{!currentData ?  "Loading... ": currentData.price}</th>
                     <th className="tkr-change">{!currentData ?  "Loading... ": currentData.change}</th>
                     <th className="tkr-change-percentage">{!currentData ?  "Loading... ": currentData.changesPercentage}</th>
@@ -53,5 +56,5 @@ const TickerArticle = ({ticker}) => {
     )
 }
 
-export default TickerArticle
+export default StockArticle
 
