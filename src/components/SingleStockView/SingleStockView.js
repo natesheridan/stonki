@@ -15,10 +15,11 @@ const SingleStockView = ({symbol}) => {
       setCurrentData(response[0])
     }
     return (
+        
         <div className ='single-stock-view'>
             <div className ='single-chart'></div>
             <div className ='single-details'>
-                    {!currentData ?  "Loading... ": <Chart symbol={symbol} start='2018-03-12' end='2019-03-12'/>}
+                    {!currentData ?  "Loading... ": <Chart symbol={symbol} start='2021-01-01' end='2021-11-5' timeseries=""/>}
                     <p className="s-symbol">{symbol}</p>
                     <img src={LogoLink}></img>
                     <p className="s-name">{!currentData ?  "Loading... ": currentData.name}</p>
