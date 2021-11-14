@@ -20,11 +20,15 @@ export const getStockPriceHistory = (symbol, params) => {
     let fromString = `&from=${from}`;
     let toString = `&to=${to}`
     let timeseriesString;
+    if (timeseries==="alltime"){
+        return axios.get(`https://financialmodelingprep.com/api/v3/historical-price-full/${symbol}?serietype=line&apikey=9626b292f3ee8a5b79cb7f5e4746c12b`)
+        .then (data => data.data)
+    }
     if (timeseries>0){
         timeseriesString = `&timeseries=${timeseries}`
         fromString = '';
         toString = '';
     }
     //REPLACING AXIOS.GET with FETCH breaks everything...
-    return axios.get(`https://financialmodelingprep.com/api/v3/historical-price-full/BOX?seriestype=line${fromString}${toString}${timeseriesString}&apikey=9626b292f3ee8a5b79cb7f5e4746c12b`)
+    return axios.get(`https://financialmodelingprep.com/api/v3/historical-price-full/${symbol}?serietype=line${fromString}${toString}${timeseriesString}&apikey=9626b292f3ee8a5b79cb7f5e4746c12b`)
     .then (data => data.data)}
