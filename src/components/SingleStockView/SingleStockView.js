@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import {getStockQuote} from '../../util/api'
+import Chart from './../Chart/Chart'
 
 
 const SingleStockView = ({symbol}) => {
     const [currentData, setCurrentData] = useState(null);
-
+    const LogoLink = `https://eodhistoricaldata.com/img/logos/US/${symbol.toUpperCase()}.png`
     useEffect(()=>{
         fetchData()
     }, [])
@@ -17,14 +18,16 @@ const SingleStockView = ({symbol}) => {
         <div className ='single-stock-view'>
             <div className ='single-chart'></div>
             <div className ='single-details'>
-                    <p className="tkr-symbol">{symbol}</p>
-                    <p className="tkr-name">{!currentData ?  "Loading... ": currentData.name}</p>
-                    <p className="tkr-price">{!currentData ?  "Loading... ": `$${(currentData.price).toFixed(2)}`}</p>
-                    <p className="tkr-change">{!currentData ?  "Loading... ": `$${(currentData.change).toFixed(2)}`}</p>
-                    <p className="tkr-change-percentage">{!currentData ?  "Loading... ": `${(currentData.changesPercentage).toFixed(3)}%`}</p>
-                    <p className="tkr-day-low">{!currentData ?  "Loading... ": `$${(currentData.dayLow).toFixed(2)}`}</p>
-                    <p className="tkr-day-high">{!currentData ?  "Loading... ": `$${(currentData.dayHigh).toFixed(2)}`}</p>
-                    <p className="tkr-open">{!currentData ?  "Loading... ": `$${(currentData.open).toFixed(2)}`}</p>
+                    {!currentData ?  "Loading... ": <Chart symbol={symbol} start='2018-03-12' end='2019-03-12'/>}
+                    <p className="s-symbol">{symbol}</p>
+                    <img src={LogoLink}></img>
+                    <p className="s-name">{!currentData ?  "Loading... ": currentData.name}</p>
+                    <p className="s-price">{!currentData ?  "Loading... ": `$${(currentData.price).toFixed(2)}`}</p>
+                    <p className="s-change">{!currentData ?  "Loading... ": `$${(currentData.change).toFixed(2)}`}</p>
+                    <p className="s-change-percentage">{!currentData ?  "Loading... ": `${(currentData.changesPercentage).toFixed(3)}%`}</p>
+                    <p className="s-day-low">{!currentData ?  "Loading... ": `$${(currentData.dayLow).toFixed(2)}`}</p>
+                    <p className="s-day-high">{!currentData ?  "Loading... ": `$${(currentData.dayHigh).toFixed(2)}`}</p>
+                    <p className="s-open">{!currentData ?  "Loading... ": `$${(currentData.open).toFixed(2)}`}</p>
             </div>
         </div>
     )
