@@ -1,0 +1,9 @@
+.ticker-container{
+
+    position: relative;
+    max-height: 400px;
+}
+.ticker-header{
+    position: sticky;
+    font-size: 14px;
+}
