@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {getStockQuote} from '../../util/api'
 import Chart from './../Chart/Chart'
+import SaveButton from '../SaveButton/SaveButton'
 
 
 const SingleStockView = ({symbol}) => {
@@ -22,6 +23,7 @@ const SingleStockView = ({symbol}) => {
                     {!currentData ?  "Loading... ": <Chart symbol={symbol} start='2021-01-01' end='2021-11-5' timeseries=""/>}
                     <p className="s-symbol">{symbol}</p>
                     <img src={LogoLink}></img>
+                    <SaveButton ticker={symbol}/>
                     <p className="s-name">{!currentData ?  "Loading... ": currentData.name}</p>
                     <p className="s-price">{!currentData ?  "Loading... ": `$${(currentData.price).toFixed(2)}`}</p>
                     <p className="s-change">{!currentData ?  "Loading... ": `$${(currentData.change).toFixed(2)}`}</p>
