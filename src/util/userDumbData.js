@@ -1,5 +1,6 @@
 export const users =
     {123041: {
+        "name": "John Doe",
         "saved": [
           "CDE",
           "TSLA",

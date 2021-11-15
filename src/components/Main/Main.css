@@ -1,9 +1,8 @@
 .main{
     position: relative;
-
-    overflow: hidden;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    height: 100%;
+    font-family: 'Cabin', sans-serif;
+}
+.welcome-title{
+    font-family: 'Staatliches', cursive;
+    text-align: center;
 }
