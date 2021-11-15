@@ -6,7 +6,7 @@ import SaveButton from './../SaveButton/SaveButton'
 
 
 
-const StockArticle = ({symbol, qty, purchasePrice}) => {
+const StockArticle = ({symbol, qty, purchasePrice, k}) => {
     const [currentData, setCurrentData] = useState(null);
     const [stockElement, setStockElement] = useState(null);
 
@@ -40,7 +40,7 @@ const StockArticle = ({symbol, qty, purchasePrice}) => {
     // }
     const link = `/stock/${symbol}`
     return (
-                <tr to={link} key={symbol} className="table-article">
+                <tr to={link} className="table-article">
                     <td><SaveButton ticker={symbol}/></td>
                     <td className="tkrs t-symbol"><Link to={link}>{symbol}</Link></td>
                     {qty&&<td className="tkrs t-qty">{qty}</td>}

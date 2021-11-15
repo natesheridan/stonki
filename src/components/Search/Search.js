@@ -15,8 +15,14 @@ const Search = ({ amount = 3 }) => {
     const fetchQueryResults = async () => {
         let response = await getSearchResults(value, amount)
         let arrOfSymbols = response.data.map(stockObj=>stockObj.symbol);
-        setResultTable((<StockContainer data={arrOfSymbols}/>))
+        setResultTable(arrOfSymbols)
+
     }
+    const generateContainer = (data) => {
+        return (
+            <StockContainer data={data}/>
+        )}
+
     
     const onChange = (event) => {
         setValue(event.target.value);
@@ -25,9 +31,10 @@ const Search = ({ amount = 3 }) => {
         <div className="search-view">
             <div>Search:</div>
             <input className="search-input" value={value} onChange={onChange} />
-            {resultTable}
+            {value && (<>{generateContainer(resultTable)}</>)}
         </div>
-  );
-};
+    );
+}
+;
 
 export default Search;
