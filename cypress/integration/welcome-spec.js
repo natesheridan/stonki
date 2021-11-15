@@ -13,7 +13,7 @@ describe("homepage", () => {
     })
     it("Both tables on welcome view should have a total length of 23 rows", () => {
         cy.get('tr')
-        .should("have.length", "23");
+        .should("have.length", "19");
     })
     it("First stock in table should be GOOG, and user should click symbol and see single page", () => {
         cy.get('.t-symbol').first()
