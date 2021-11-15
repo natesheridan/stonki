@@ -16,7 +16,7 @@ const Main = () => {
                     <h2 className="welcome-title">Welcome to Stonki!</h2>
                     <br></br>
 
-                    <StockContainer title="Featured Stocks" data={['AAPL', 'TSLA', 'ABC', 'BOX', 'IBM', 'FB']}/>
+                    <StockContainer title="Featured Stocks" data={['GOOG', 'TSLA', 'FB', 'NVDA', 'DIS', 'PYPL', 'SHOP', 'AMD', 'ABNB', 'COIN', 'ADSK', 'LCID', 'NET', 'RBLX', 'U', 'PLTR', 'XPEV', 'AFRM']}/>
                 </>
             )}}
             />
