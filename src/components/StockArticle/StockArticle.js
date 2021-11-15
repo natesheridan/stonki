@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './StockArticle.css'
 import { getStockQuote } from '../../util/api'
+import SaveButton from './../SaveButton/SaveButton'
 
 
 
@@ -40,6 +41,7 @@ const StockArticle = ({symbol, qty, purchasePrice}) => {
     return (
             <>
                 <tr key={symbol} className="ticker-article">
+                    <SaveButton ticker={symbol}/>
                     <td className="tkr-symbol">{symbol}</td>
                     {qty&&<td className="tkr-qty">{qty}</td>}
                     {qty&&
