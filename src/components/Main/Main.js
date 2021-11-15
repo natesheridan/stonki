@@ -33,12 +33,11 @@ const Main = () => {
                 )}}
             />
             <Route
-           exact path="/search"
-           //USER DATA IS BEING PASSING IN AS DATA BELOW - COMPONENT KNOWS TO RENDER QTY and VALUE in table bc type
-           render ={() => {return(
-               <Search amount={15}/>
-               )}}
-           />
+                exact path="/search"
+                render ={() => {return(
+                    <Search amount={15}/>
+                )}}
+            />
         </div>
     )
 }

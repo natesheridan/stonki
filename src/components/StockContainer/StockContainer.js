@@ -17,12 +17,12 @@ const StockContainer = ({data, title, type}) => {
         console.log(totalValue)
     }
     const generateStockArticles = () => {
-        const generatedElements = data.map((indvStock) => {
+        const generatedElements = data.map((indvStock, i) => {
             if(type === 'portfolio'){
                 return (<StockArticle updateTotalValue={updateTotalValue} symbol={indvStock.symbol} qty={indvStock.quantity} purchasePrice={indvStock.purchasePrice}/>)
             }
             if(!type){
-                return (<StockArticle symbol={indvStock}/>)
+                return (<StockArticle key={i} symbol={indvStock}/>)
             }
         })
         setElements(generatedElements)
@@ -30,7 +30,7 @@ const StockContainer = ({data, title, type}) => {
     return (
         <div className="table-wrapper">
             <h2>{title}</h2>
-            {type==="portfolio" &&<h2>(${totalValue})</h2>}
+            {/* {type==="portfolio" &&<h2>(${totalValue})</h2>} */}
             <table className="table-container">
                 <thead>
                     <tr className="table-header">

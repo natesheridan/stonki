@@ -26,8 +26,6 @@ const SaveButton = ({ticker}) => {
                 "purchasePrice": 5.99 // Need input field to change these two data sets
             }
             users[currentUserID].portfolio.push(stockObj)
-            console.log("added")
-            console.log(users[currentUserID])
             setIsFavorite(true)
             setIcon(AiFillHeart)
         }
