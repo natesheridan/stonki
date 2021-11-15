@@ -10,7 +10,15 @@ const Main = () => {
         <div className="main">
             <Route
             exact path={['/', '/home']}
-            render ={() => <StockContainer data={['AAPL', 'TSLA', 'ABC', 'BOX', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC', 'AAPL', 'TSLA', 'ABC']}/>}
+            render ={() => {return(
+                <>
+                    <h1 className="welcome-title">Hi {users['123041'].name},</h1>
+                    <h2 className="welcome-title">Welcome to Stonki!</h2>
+                    <br></br>
+
+                    <StockContainer title="Featured Stocks" data={['AAPL', 'TSLA', 'ABC', 'BOX', 'IBM', 'FB']}/>
+                </>
+            )}}
             />
             <Route
             exact path="/stock/:symbol"
@@ -19,7 +27,7 @@ const Main = () => {
              <Route
             exact path="/profile"
             //USER DATA IS BEING PASSING IN AS DATA BELOW - COMPONENT KNOWS TO RENDER QTY and VALUE in table bc type
-            render ={() => <StockContainer data={users['123041'].portfolio} type='portfolio'/>}
+            render ={() => <StockContainer title="User Portfolio" data={users['123041'].portfolio} type='portfolio'/>}
             />
             {/*<Route
             exact path="/"

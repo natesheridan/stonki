@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import {getStockPriceHistory} from '../../util/api'
-
+import './Chart.css'
 const Chart = ({symbol, start, end, timeseries}) => {
   const [historyData, setHistoryData] = useState(null);
   const [params, setParams] = useState({
@@ -32,9 +32,9 @@ const Chart = ({symbol, start, end, timeseries}) => {
   return (
     <div className="chart">
 
-      <LineChart width={650} height={500} data={historyData}>
+      <LineChart width={window.innerWidth - (window.innerWidth*0.15)} height={500} data={historyData}>
         <Line type="monotone" dataKey="close" stroke="#00a7e1" />
-        <CartesianGrid stroke="#373737" />
+        <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
         <XAxis dataKey="date" />
         <YAxis dataKey='close'/>
         <Tooltip/>
