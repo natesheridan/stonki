@@ -26,15 +26,19 @@ Stonki is a minimalist NASDAQ stock monitoring application. This app was built i
 ## Demo
 
 Homepage  Mobile
+
 ![Mobile Welcome View](https://i.imgur.com/JP8ZPkX.png)
 
 Chart/SingleStockView Mobile
+
 ![Mobile Single View](https://i.imgur.com/owVov9Y.png)
 
 Home Desktop
+
 ![Desktop View](https://i.imgur.com/oXhrcHq.png)
 
 Portfolio Desktop
+
 ![Desktop Portfolio](https://i.imgur.com/GkfK2pU.png)
 
 ## Deploy Link
