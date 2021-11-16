@@ -77,4 +77,4 @@ Charts, after I got the hang of them I was blown away by how useful and easy to 
 This is one of the first apps that has a functional use cases for me over another website, and that's a big win!
 ## Future Features
 Right now when the user adds a stock to their porfolio it is adding a default value and buy price. In the future implementing a small popup to ask the use those value will be added.
-Adding backend user storage and authentication. No one wants to share their stock portfolio with the world- right now the 'user' is a dumby.js file.
+Adding backend user storage and authentication. No one wants to share their stock portfolio with the world- right now the 'user' is a dumby.js file. This also includes the persisting data feature which is MUCH needed for this app to be viable to use.
