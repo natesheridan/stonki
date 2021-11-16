@@ -42,7 +42,7 @@ Portfolio Desktop
 ![Desktop Portfolio](https://i.imgur.com/GkfK2pU.png)
 
 ## Deploy Link
-http://n8.wtf/stonki
+http://n8.wtf/stonki (redirects to AWS)
 ## Dev Installation
 
 Either use the green "download code" button ![downloadbutton](https://imgur.com/lYy4FVP.png) at the top of the page to copy a clone link or right-click [here](https://github.com/natesheridan/Stonki.git) and click "Copy link address"
