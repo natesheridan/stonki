@@ -2,7 +2,8 @@
 
 
 # Stonki 📈
-![Preview](https://i.imgur.com/owVov9Y.png)
+![Preview](https://i.imgur.com/oXhrcHq.png)
+
 Stonki is a minimalist NASDAQ stock monitoring application. This app was built in less than a week for a showcase project at Turing. Stonki uses React and FinancialModelingPrep api to show the user up to date information about their favorite stocks. It also allows the user to store favorites and keep track of profits if buy price is recorded up front. User focus is a mobile friendly interface, and general ease of use.
 
 
