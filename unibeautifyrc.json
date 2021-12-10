@@ -1,0 +1,51 @@
+{
+  "JavaScript": {
+    "beautifiers": [
+      "Prettier",
+      "Pretty Diff",
+      "JS-Beautify",
+      "ESLint"
+    ]
+  },
+  "JSX": {
+    "beautifiers": [
+      "Prettier",
+      "Pretty Diff",
+      "JS-Beautify",
+      "ESLint"
+    ]
+  },
+  "JSON": {
+    "beautifiers": [
+      "Prettier",
+      "Pretty Diff",
+      "JS-Beautify"
+    ]
+  },
+  "CSS": {
+    "beautifiers": [
+      "Prettier",
+      "Pretty Diff",
+      "JS-Beautify",
+      "CSScomb"
+    ]
+  },
+  "Sass": {
+    "beautifiers": [
+      "CSScomb"
+    ]
+  },
+  "TypeScript": {
+    "beautifiers": [
+      "Prettier",
+      "Pretty Diff",
+      "TSLint"
+    ]
+  },
+  "HTML": {
+    "beautifiers": [
+      "Pretty Diff",
+      "JS-Beautify"
+    ]
+  }
+}

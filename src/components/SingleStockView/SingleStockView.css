@@ -1,0 +1,40 @@
+.single-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.single-details .save-button{
+    transform: scale(2);
+}
+
+.ssvd:before{
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(161, 161, 161);
+}
+.d-profits:before{
+    content: "profit +/-";
+}
+
+.d-purchase-price:before{
+    content: "purchase price";
+}
+.d-price:before{
+    content: "current";
+}
+.d-change:before{
+    content: "day +/-";
+}
+.d-change-percentage:before{
+    content: "day %";
+}
+.d-day-low:before{
+    content: "day low";
+}
+.d-day-high:before{
+    content: "day high";
+}
+.d-open:before{
+    content: "open price";
+}

@@ -1,0 +1,48 @@
+/* 
+.ticker-container tr:hover ~ 
+.ticker-container tr:nth-child(even){
+    background-color:rgb(216, 216, 216);
+}
+.ticker-container tr:nth-child(odd){
+    background-color:rgb(175, 175, 175);
+} */
+
+@media (max-width: 700px) {
+    
+    .tkrs:before{
+        display: block;
+        font-size: 10px;
+        color: rgb(161, 161, 161);
+    }
+    .t-symbol:before{
+        content: "symbol";
+    }
+    .t-value:before{
+        content: "value";
+    }
+    .t-profits:before{
+        content: "profit +/-";
+    }
+
+    .t-purchase-price:before{
+        content: "purchase price";
+    }
+    .t-price:before{
+        content: "current";
+    }
+    .t-change:before{
+        content: "day +/-";
+    }
+    .t-change-percentage:before{
+        content: "day %";
+    }
+    .t-day-low:before{
+        content: "day low";
+    }
+    .t-day-high:before{
+        content: "day high";
+    }
+    .t-open:before{
+        content: "open price";
+    }
+}
