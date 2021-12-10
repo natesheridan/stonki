@@ -5,11 +5,12 @@ import './Search.css'
 
 const Search = ({ amount = 3 }) => {
     const [value, setValue] = useState("");
-    const [resultTable, setResultTable] = useState(null)
+    const [resultTable, setResultTable] = useState([])
 
 
     useEffect(() => {
         fetchQueryResults(value)
+        console.log(value)
     }, [value]);
 
     const fetchQueryResults = async () => {
@@ -30,8 +31,8 @@ const Search = ({ amount = 3 }) => {
     return (
         <div className="search-view">
             <div>Search:</div>
-            <input className="search-input" value={value} onChange={onChange} />
-            {value && (<>{generateContainer(resultTable)}</>)}
+            <input className="search-input" type="text" placeholder="ticker / company name" value={value} onChange={onChange} />
+            <StockContainer key={resultTable.length} data={resultTable}/>
         </div>
     );
 }
